@@ -4,6 +4,5 @@ export default function Home() {
     <>
     <h1>welcome to nexsus hub</h1>
     </>
-    
   );
 }
