@@ -1,18 +1,16 @@
-"use client"
-import toast from "react-hot-toast";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+
 export default function Home() {
-  const navigate = useRouter()
-  const btn = () => {
-    console.log("hello")
-    toast.success("hello");
-    navigate.push("/Signup")
-    
-  }
+  
   return (
     <>
-    <h1 className="text-yellow-200" onClick={btn} >welcome to nexsus hub</h1>
+      <h1 className=" text-blue-500 ">welcome to nexsus hub</h1>
+      <p>
+        <Link href="/Login">Login</Link>
+      </p>
+      <p>
+        <Link href="/Signup">Sign up</Link>
+      </p>
     </>
-    
   );
 }

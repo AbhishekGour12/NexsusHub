@@ -7,6 +7,7 @@ export const authAPI ={
         const response = await api.post('/auth/register', userdata);
         return response.data
         }catch (error:any){
+            console.log(error.message)
             const errorMessage = error.response?.data?.message || 'Registration failed. please try again.';
             throw new Error (errorMessage);
         }

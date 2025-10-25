@@ -2,8 +2,10 @@ import express  from 'express';
 import  dotenv from 'dotenv';
 import userRoutes from './routes/UserRoutes.js';
 import sequelize from './config/db.js';
+import cors from 'cors'
 const app = express();
 dotenv.config();
+app.use(cors())
 
 
 
