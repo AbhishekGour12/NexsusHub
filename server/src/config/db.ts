@@ -1,12 +1,16 @@
 import { Sequelize } from "sequelize";
 import dotenv from 'dotenv';
-dotenv.config()
+import dns from 'dns';
+
+dotenv.config();
+
+
 const supabaseUrl = process.env.SupabaseURL as string;
+dns.setDefaultResultOrder('ipv4first')
 console.log(supabaseUrl);
 
 const sequelize = new Sequelize(supabaseUrl, {
  dialect: "postgres",           // explicitly set
-  protocol: "postgres",          // explicitly set
   dialectOptions: {
     ssl: {
       require: true,
