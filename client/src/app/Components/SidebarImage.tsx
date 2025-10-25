@@ -10,15 +10,19 @@ interface SidebarImageProps{
 
 const SidebarImage: React.FC<SidebarImageProps> = ({src, alt, className}) => {
     return (
-        <div className={`w-full md:w-1/2 md:h-full ${className || ""}`}>
-            <Image
-                src={src}
-                alt={alt}
-                width={320}
-                height={200}
-                className='object-cover'
-            />
-        </div>
+      <div
+        className={`w-full md:w-1/2 md:h-full flex justify-center bg-[#F9F9F9] ${
+          className || ""
+        }`}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          width={380}
+          height={200}
+          className="object-cover"
+        />
+      </div>
     );
 };
 
