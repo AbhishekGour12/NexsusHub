@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: smart-erp-backend          # 👈 change this to your app name
+    runtime: node
+    plan: free                       # use 'starter' or 'pro' if you upgrade
+    buildCommand: npm install
+    startCommand: node --dns-result-order=ipv4first server.js
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false                   # you'll set this manually in Render dashboard
+      - key: PORT
+        value: 5000
