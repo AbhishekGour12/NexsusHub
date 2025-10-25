@@ -1,8 +1,8 @@
 "use client"
-import React from 'react'
+import * as React from 'react'
 
 export default function Signup() {
   return (
-    <div>Signup</div>
+    <div className=''>Signup</div>
   )
 }
