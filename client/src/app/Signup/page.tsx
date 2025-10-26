@@ -49,22 +49,22 @@ export default function Signup() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-[#F9F9F9]">
+    <div className="flex flex-col md:flex-row h-screen bg-[#FFFFFF]">
       {/* Left sidebar image */}
-      <SidebarImage src="/sidebar.jpg" alt="Signup image" />
+      <SidebarImage src="/signup.png" alt="Signup image" />
 
       {/* Right form section */}
-      <div className="md:w-1/2 w-full flex flex-col justify-center items-center p-6">
-        <div className="bg-white p-10 rounded-xl shadow-lg w-full max-w-sm">
+      <div className="md:w-1/2 w-full flex flex-col justify-center items-center max-[768px]:place-content-center max-md:items-center  h-full p-6 ">
+        <div className="bg-white p-10 rounded-xl shadow-lg w-full max-md:place-items-center  max-w-sm">
           <div className="text-4xl font-bold text-green-600 text-center mb-4">
-            Logo
+            Logo 
           </div>
 
           <h1 className="text-4xl font-bold text-green-700 mb-8 text-center">
             Sign up
           </h1>
 
-          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+          <form className="flex flex-col gap-4 w-full" onSubmit={handleSubmit}>
             <div className="flex items-center border-2 border-green-300 focus-within:border-green-500 p-2 rounded-md transition-all">
               <MdPerson className="text-green-500 mr-2" size={22} />
               <input

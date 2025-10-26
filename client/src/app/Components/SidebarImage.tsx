@@ -11,7 +11,7 @@ interface SidebarImageProps{
 const SidebarImage: React.FC<SidebarImageProps> = ({src, alt, className}) => {
     return (
       <div
-        className={`hidden lg:flex w-1/2 h-full justify-center items-center bg-[#F9F9F9] ${
+        className={`hidden  min-[768px]:flex w-1/2 h-full justify-center items-center bg-[] ${
           className || ""
         }`}
       >
@@ -19,8 +19,8 @@ const SidebarImage: React.FC<SidebarImageProps> = ({src, alt, className}) => {
           src={src}
           alt={alt}
           width={330}
-          height={100}
-          className="object-cover"
+          height={50}
+          className="object-cover  h-[70%] w-[50%] "
         />
       </div>
     );

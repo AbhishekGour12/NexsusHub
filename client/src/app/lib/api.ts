@@ -4,7 +4,7 @@ import { error } from "console";
 
 
 const api = axios.create({
-    baseURL: "http://localhost:5000/api",
+    baseURL: process.env.NEXT_PUBLIC_API,
     timeout: 10000
 })
 
