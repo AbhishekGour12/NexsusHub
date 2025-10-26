@@ -1,1 +1,6 @@
 @import "tailwindcss";
+@import url("https://api.fontshare.com/v2/css?f[]=sentient@400&display=swap");
+
+.font-sentient {
+    font-family: 'Sentient', serif;
+}
