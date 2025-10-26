@@ -6,7 +6,6 @@ import { MdMail, MdPerson } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { authAPI } from "../lib/auth";
 import toast from "react-hot-toast";
-import axios from "axios";
 
 export default function Signup() {
   const [formData, setFormData] = useState({
