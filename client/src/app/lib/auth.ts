@@ -18,6 +18,7 @@ export const authAPI ={
         const response = await api.post('/auth/login', userdata);
         return response.data
         }catch (error:any){
+            console.log(error)
             const errorMessage = error.response?.data?.message || 'Login failed. please try again.';
             throw new Error (errorMessage);
         }
