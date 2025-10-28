@@ -20,7 +20,10 @@ export default function Signup() {
 
   // 🔹 Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   // 🔹 Handle form submit
@@ -30,7 +33,7 @@ export default function Signup() {
     setMessage("");
 
     try {
-      const res = await authAPI.resigter(formData);
+      const res = await authAPI.register(formData);
       
       if(res){
         toast.success(res.message);
